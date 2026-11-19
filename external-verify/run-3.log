@@ -5,4 +5,8 @@
 [2026-11-19 11:18:06] copying syz binaries and program set
 [2026-11-19 11:18:09] starting syz-execprog
 [2026-11-19 11:21:35] exec elapsed=206s hit=1
-[2026-11-19 11:21:37] TARGET-HIT: WARNING in diRead
+[2026-11-19 11:21:37] TARGET-HIT: INFO: task hung in f2fs_write_data_pages
+Target evidence:
+  serial-3.log:8159: INFO: task syz.5.92:14783 blocked for more than 143 seconds.
+  serial-3.log:8173: f2fs_write_data_pages+0xfaf/0x14a0
+Detection criterion: hung-task report contains f2fs_write_data_pages
